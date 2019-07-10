@@ -1,0 +1,264 @@
+@font-face {
+  src: url("../fonts/Lato-Medium.ttf");
+  font-family: Lato-Medium;
+}
+
+@font-face {
+  src: url("../fonts/Lato-Regular.ttf");
+  font-family: Lato-Regular;
+}
+
+@font-face {
+  src: url("../fonts/Quicksand-Regular.otf");
+  font-family: Quicksand-Regular;
+}
+
+@font-face {
+  src: url("../fonts/Raleway-Black.ttf");
+  font-family: Raleway-Black;
+}
+
+@font-face {
+  src: url("../fonts/Raleway-Bold.ttf");
+  font-family: Raleway-Bold;
+}
+
+@font-face {
+  src: url("../fonts/Raleway-Light.ttf");
+  font-family: Raleway-Light;
+}
+
+@font-face {
+  src: url("../fonts/Raleway-Medium.ttf");
+  font-family: Raleway-Medium;
+}
+
+@font-face {
+  src: url("../fonts/Raleway-Regular.ttf");
+  font-family: Raleway-Regular;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Black.ttf");
+  font-family: Roboto-Black;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: Roboto-Regular;
+}
+
+@font-face {
+  src: url("../fonts/Roboto-Thin.ttf");
+  font-family: Roboto-Thin;
+}
+
+.login-form {
+  z-index: 10;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.login-form .card {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 40%;
+}
+
+.login-form .card-header {
+  background-color: #f2f2f2;
+}
+
+.login-form .card-header img {
+  width: 60px;
+  height: 60px;
+  float: left;
+}
+
+.login-form .card-header h2 {
+  float: left;
+  padding: 5px;
+  line-height: 25px;
+  font-family: Raleway-Medium;
+  font-size: 35px;
+}
+
+.login-form .card-header span {
+  font-family: Raleway-Light;
+  font-size: 20px;
+}
+
+.login-form h1, .login-form p, .login-form b {
+  color: #333;
+  font-family: Lato-Regular;
+}
+
+#sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background-color: #323232;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+#sidebar .banner {
+  padding-bottom: 10px;
+  white-space: nowrap;
+}
+
+#sidebar .banner .logo {
+  display: inline-block;
+  padding-left: 3px;
+  margin-top: 0;
+}
+
+#sidebar .banner .logo img {
+  height: 50px;
+  width: 50px;
+}
+
+#sidebar .banner .logo-name {
+  font-family: Raleway-Bold;
+  display: inline-block;
+  padding-left: 3px;
+}
+
+#sidebar .banner .logo-name h3 {
+  font-size: 35px;
+}
+
+#sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 28px;
+}
+
+#sidebar .closebtn:hover {
+  text-decoration: none;
+}
+
+#sidebar .Profile {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  margin-bottom: 20px;
+  border-top: 1px solid #4b545c;
+  border-bottom: 1px solid #4b545c;
+  font-family: Raleway-Medium;
+}
+
+#sidebar .Profile .image {
+  display: block;
+}
+
+#sidebar .Profile .image img {
+  border: 2px solid #fff;
+}
+
+#sidebar .Profile .p-info {
+  display: inline-block;
+}
+
+#sidebar .Profile .p-info h6 {
+  font-size: 14px;
+}
+
+#sidebar .li-navs li a {
+  margin-left: 5px;
+  margin-right: 5px;
+  white-space: nowrap;
+  font-size: 15px;
+}
+
+#sidebar .li-navs li a:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#0f8a80), to(#11d45c));
+  background: linear-gradient(to right, #0f8a80, #11d45c);
+  border-radius: 8px;
+}
+
+#sidebar .custom-caret {
+  font-size: 21px;
+  float: right;
+  right: 10px;
+  margin-top: -5px;
+  display: inline;
+  position: absolute;
+}
+
+#sidebar.active {
+  left: 0px;
+}
+
+.toggle-btn {
+  position: absolute;
+  left: 30px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.toggle-btn span {
+  display: block;
+  width: 23px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
+.overlay3 {
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-align: center;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: 10;
+}
+
+.ess-navigation {
+  padding: 8px;
+  background: #373b44;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#373b44), to(#4286f4));
+  background: linear-gradient(to right, #373b44, #4286f4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 60px;
+}
+
+.ess-navigation .nav-item {
+  cursor: pointer;
+}
+
+.ess-navigation li {
+  list-style-type: none;
+}
+
+.ess-navigation a {
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+/*# sourceMappingURL=style.css.map */
