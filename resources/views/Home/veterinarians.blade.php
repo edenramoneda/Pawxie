@@ -13,6 +13,34 @@
         $('#myTable').DataTable({
             responsive: true,
             select: true,
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    text: 'Add Veterinarian',  
+                    className: 'btn btn-primary',
+                    action: function () {
+                        alert( 'Sample' );
+                    }
+                },
+                'copy',
+                {   
+                    extend:'print',
+                    messageTop: 'List of Veterinarians',
+                    title: 'Pawxie Veterinary Clinic',
+                    exportOptions: {
+                    columns: [ 0, 1, 2, 3]
+                    }
+                },
+                {   
+                    extend:'csv',
+                    messageTop: 'List Of Veterinarians',
+                    title: 'Pawxie Veterinary Clinic',
+                    exportOptions: {
+                    columns: [ 0, 1, 2, 3]
+                    }
+                },
+
+            ],
             ajax: {
                 "url": "veterinarians/getVeterinaries",
                 "dataSrc": ""
