@@ -2,8 +2,10 @@
 
 @section('title', 'Pawxie | Login')
 
-<nav class="navbar navbar-expand-sm ess-navigation">
-  <a class="navbar-brand text-white" href="/"><strong>Pawxie</strong> Veterinary Clinic</a>
+<nav class="navbar navbar-expand-sm ess-navigation justify-content-center">
+  <a class="navbar-brand text-white" href="/">
+    <img src="{{asset('images/logo.png')}}" alt="logo" style="width:40px;">
+    <strong>Pawxie</strong> Veterinary Clinic</a>
 </nav>
 
 @section('login')

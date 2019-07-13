@@ -1,1 +1,1 @@
-<a href="logout">logout</a>
+@extends('layouts.sidebar')
