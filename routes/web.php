@@ -11,6 +11,36 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', 'LoginController@login');
+Route::get('/logout', 'LoginController@logout');
+Route::post('AuthLogin','LoginController@loginAuth');
+//Homepage
+Route::get('home', 'HomepageController@index');
+//Patient
+Route::prefix('patient')->group(function () {
+    Route::get('owners', 'patientOwnersController@index');
+    Route::get('getOwners', 'patientOwnersController@getOwners');
+    Route::get('pets', 'patientPetsController@index');
+    Route::get('getPets', 'patientPetsController@getPets');
+    Route::prefix('petVaccination')->group(function(){
+        Route::get('/', 'petVaccinationsController@index');
+        Route::get('getPetVac', 'petVaccinationsController@petVaccinations');
+    });
+    Route::prefix('/petLabTests')->group(function(){
+        Route::get('/', 'petLabTestsController@index');
+        Route::get('getpetLabTests', 'petLabTestsController@getpetLabTests');
+    });
 });
+Route::prefix('vaccination')->group(function () {
+    Route::get('/', 'vaccinationController@index');
+    Route::get('getVaccinations', 'vaccinationController@getVaccinations');
+});
+Route::prefix('labtest')->group(function () {
+    Route::get('/', 'labTestController@index');
+    Route::get('getLabTest', 'labTestController@getLabTest');
+});
+Route::prefix('veterinarians')->group(function () {
+    Route::get('/', 'veterinaryController@index');
+    Route::get('getVeterinaries', 'veterinaryController@getVeterinaries');
+});
+
