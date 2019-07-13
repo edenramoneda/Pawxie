@@ -13,6 +13,34 @@
         $('#myTable').DataTable({
             responsive: true,
             select: true,
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    text: 'Add Vaccine',  
+                    className: 'btn btn-primary',
+                    action: function () {
+                        alert( 'Sample' );
+                    }
+                },
+                'copy',
+                {   
+                    extend:'print',
+                    messageTop: 'List of Vaccinations',
+                    title: 'Pawxie Veterinary Clinic',
+                    exportOptions: {
+                    columns: [ 0, 1, 2, 3]
+                    }
+                },
+                {   
+                    extend:'csv',
+                    messageTop: 'List Of Vaccinations',
+                    title: 'Pawxie Veterinary Clinic',
+                    exportOptions: {
+                    columns: [ 0, 1, 2, 3]
+                    }
+                },
+
+            ],
             ajax: {
                 "url": "vaccination/getVaccinations",
                 "dataSrc": ""
