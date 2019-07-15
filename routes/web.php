@@ -25,6 +25,7 @@ Route::prefix('patient')->group(function () {
     Route::prefix('petVaccination')->group(function(){
         Route::get('/', 'petVaccinationsController@index');
         Route::get('getPetVac', 'petVaccinationsController@petVaccinations');
+        Route::get('vaccinationReportModal/{pet_id}', 'petVaccinationsController@vaccinationReportModal');
     });
     Route::prefix('/petLabTests')->group(function(){
         Route::get('/', 'petLabTestsController@index');

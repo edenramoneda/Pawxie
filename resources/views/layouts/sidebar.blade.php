@@ -85,7 +85,7 @@
         </li>&ensp;&ensp;
 
 
-        <li class="nav-item text-white dropdown" title="Messages">
+        <!--<li class="nav-item text-white dropdown" title="Messages">
             <div data-toggle="dropdown">
                 <i class="fa fa-envelope"></i>
                 <sup><span class="badge badge-danger">
@@ -106,13 +106,13 @@
                         </div>
                     </div>
             </div>
-        </li>&ensp;&ensp;
+        </li>&ensp;&ensp;-->
         <li><a href="/logout">
         <i class="fa fa-user text-white" title="logout"></i></a></li>
     </nav>
     <div id="overlay" style="width: 100%; opacity: 0.9;"></div>
     @show
 
-     <div class="container-fluid mt-5">
+     <div class="container-fluid mt-3">
             @yield('content')
     </div>

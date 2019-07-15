@@ -1,6 +1,7 @@
 @extends('layouts.sidebar')
 
     @section('content')
+    <h3>List of Vaccines</h3><br>
         <div class="table-responsive-sm">
             <table id="myTable" class="table table-striped" style="width:100%">
             </table>
@@ -53,6 +54,10 @@
             { 
             title: "Vaccination",
             data: 'vaccination' 
+            },
+            { 
+            title: "Duration",
+            data: 'duration' 
             },
             {
                 title:"Action",

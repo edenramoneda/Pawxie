@@ -1,6 +1,7 @@
 @extends('layouts.sidebar')
 
     @section('content')
+    <h3>List of Veterinarians</h3><br>
         <div class="table-responsive-sm">
             <table id="myTable" class="table table-striped" style="width:100%">
             </table>
