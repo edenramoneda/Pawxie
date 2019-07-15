@@ -19,4 +19,17 @@ class petLabTestsController extends Controller
         ->groupBy('p.pet_fullname')
         ->get();
     }
+    public function petLabTestModal($pet_id){
+        return petLabTestModel::
+        select(DB::raw('p.pet_id AS pet_id,p.pet_fullname,
+        lt.lab_tests AS lab_test,tbl_pet_lab_tests.result AS result,
+        STR_TO_DATE(tbl_pet_lab_tests.created_at, "%Y-%m-%d") AS date_taken, tbl_pet_lab_tests.next_lab_tests, 
+        CONCAT(vet.firstname," ",vet.middlename," ",vet.lastname)AS veterinarian
+        '))
+        ->join('tbl_pets AS p','p.pet_id','=','tbl_pet_lab_tests.pet_id')
+        ->join('tbl_lab_tests AS lt','lt.lab_test_id','=','tbl_pet_lab_tests.lab_test_id') 
+        ->join('tbl_veterinary AS vet','vet.veterinary_id','=','tbl_pet_lab_tests.veterinary_id')
+        ->where('p.pet_id','=',$pet_id)
+        ->get();
+    }
 }

@@ -80,6 +80,13 @@
                 'render': function(data){
                     return '<a href="' +data+ '">Edit</a>&ensp;<a href="' +data+ '">Drop</a>';
                 }
+            },
+            {
+                title:"Report",
+                data: 'pet_id',
+                'render': function(data){
+                    return '<a href="/patient/report/'+data+'">Print Report</a>';
+                }
             }
             
         ], 

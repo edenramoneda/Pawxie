@@ -21,6 +21,8 @@ Route::prefix('patient')->group(function () {
     Route::get('owners', 'patientOwnersController@index');
     Route::get('getOwners', 'patientOwnersController@getOwners');
     Route::get('pets', 'patientPetsController@index');
+    //pet report
+    Route::get('report/{pet_id}','patientPetsController@printReport');
     Route::get('getPets', 'patientPetsController@getPets');
     Route::prefix('petVaccination')->group(function(){
         Route::get('/', 'petVaccinationsController@index');
@@ -30,6 +32,7 @@ Route::prefix('patient')->group(function () {
     Route::prefix('/petLabTests')->group(function(){
         Route::get('/', 'petLabTestsController@index');
         Route::get('getpetLabTests', 'petLabTestsController@getpetLabTests');
+        Route::get('petLabTestModal/{pet_id}', 'petLabTestsController@petLabTestModal');
     });
 });
 Route::prefix('vaccination')->group(function () {
